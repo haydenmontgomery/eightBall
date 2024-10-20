@@ -1,6 +1,33 @@
-.Circle {
-  height: 100px;
-  width: 100px;
+.Circleblack {
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
+  background-color: black;
+  color: white;
   display: inline-block;
 }
+
+.Circlegreen {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: green;
+  display: inline-block;
+}
+
+.Circlegoldenrod {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: goldenrod;
+  display: inline-block;
+}
+
+.Circlered {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: red;
+  display: inline-block;
+}
+

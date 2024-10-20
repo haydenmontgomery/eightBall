@@ -4,18 +4,21 @@ import "./EightBall.css"
 const EightBall = (props) => {
   const genRandom = () => Math.floor(Math.random() * 20);
   const giveAnswer = () => {
-    setAnswer
+    const ranNum = genRandom();
+    setAnswer(props.answers[ranNum].msg)
+    setColor(`Circle${props.answers[ranNum].color}`)
   }
 
-  const [answer, setAnswer] = useState(genRandom());
+  const [answer, setAnswer] = useState("Think of a question");
+  const [color, setColor] = useState("CircleBlack");
   return(
     <div>
-      <button className="Circle">Think of a question</button>
+      <button className={color} onClick={giveAnswer}>{answer}</button>
     </div>
   )
 }
 
-EightBall.defaultProps:
+EightBall.defaultProps = {
   answers: [
     { msg: "It is certain.", color: "green" },
     { msg: "It is decidedly so.", color: "green" },
@@ -38,5 +41,5 @@ EightBall.defaultProps:
     { msg: "Outlook not so good.", color: "red" },
     { msg: "Very doubtful.", color: "red" },
   ]
-
+}
 export default EightBall;
